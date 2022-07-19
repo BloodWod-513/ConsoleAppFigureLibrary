@@ -15,6 +15,8 @@ namespace ConsoleAppFigureLibrary
             Console.WriteLine(triangle.Print());
             Triangle straightAngleTriangle = new Triangle(new Vector(0, 0), new Vector(0, 2), new Vector(5, 0));
             Console.WriteLine(straightAngleTriangle.Print());
+            Triangle triangleWithoutVertices = new Triangle(5, 2, 6);
+            Console.WriteLine(triangleWithoutVertices.Print());
             Console.ReadKey();
         }
     }
