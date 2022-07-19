@@ -32,7 +32,7 @@ namespace FigureLibrary
 
         protected Triangle() : base(defaultFigureName)
         {
-        }        
+        }
         public void IsExsist()
         {
             if (A <= 0 || B <= 0 || C <= 0)
