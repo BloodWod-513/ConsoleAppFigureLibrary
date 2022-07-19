@@ -11,12 +11,14 @@ namespace ConsoleAppFigureLibrary
     {
         static void Main()
         {
-            Triangle triangle = new Triangle(new Vector(0, 0), new Vector(1, 2), new Vector(2, 0));
+            TriangleWithVertices triangle = new TriangleWithVertices(new Vector(0, 0), new Vector(1, 2), new Vector(2, 0));
             Console.WriteLine(triangle.Print());
-            Triangle straightAngleTriangle = new Triangle(new Vector(0, 0), new Vector(0, 2), new Vector(5, 0));
+            TriangleWithVertices straightAngleTriangle = new TriangleWithVertices(new Vector(0, 0), new Vector(0, 2), new Vector(5, 0));
             Console.WriteLine(straightAngleTriangle.Print());
-            Triangle triangleWithoutVertices = new Triangle(5, 2, 6);
+            TriangleWithoutVertices triangleWithoutVertices = new TriangleWithoutVertices(5, 2, 6);
             Console.WriteLine(triangleWithoutVertices.Print());
+            Circle circle = new Circle(5);
+            Console.WriteLine(circle.Print());
             Console.ReadKey();
         }
     }

@@ -23,7 +23,7 @@ namespace FigureLibrary
         {
             return $"Фигура: {FigureType}\n" +
                 $"Радиус: {Radius}\n" +
-                $"$Площадь: {Square()}\n";
+                $"Площадь: {Square()}\n";
         }
     }
 }
