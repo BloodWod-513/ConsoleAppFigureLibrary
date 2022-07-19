@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FigureLibrary
 {
-    public class TriangleWithoutVertices : Triangle
+    public class TriangleWithoutVertices : Triangle, IPrint
     {
         public TriangleWithoutVertices(double a, double b, double c)
         {
@@ -27,7 +27,7 @@ namespace FigureLibrary
         {
             C = c;
         }
-        public override string Print()
+        public string Print()
         {
             return $"Фигура: {FigureType} без вершин\n" +
                 $"Площадь треугольника: {Square()}\n" +

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FigureLibrary
 {
-    public class TriangleWithVertices : Triangle
+    public class TriangleWithVertices : Triangle, IPrint
     {
         public Vector PointA
         {
@@ -46,7 +46,7 @@ namespace FigureLibrary
             SetLengths();
             MakeTriangle();
         }
-        public override string Print()
+        public string Print()
         {
             return $"Фигура: {FigureType} с вершинами\n" +
                 $"Площадь треугольника: {Square()}\n" +

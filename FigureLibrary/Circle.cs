@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FigureLibrary
 {
-    public class Circle : Figure
+    public class Circle : Figure, IPrint
     {
         public double Radius { get; set; }
         private const string defaultFigureName = "Круг";
