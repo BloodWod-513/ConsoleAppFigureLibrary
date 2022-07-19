@@ -7,7 +7,7 @@
         {
             FigureType = figureType;
         }
-        public abstract float Square();
+        public abstract double Square();
         public override string ToString()
         {
             return FigureType;
