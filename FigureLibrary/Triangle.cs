@@ -12,9 +12,9 @@ namespace FigureLibrary
         public Vector PointA { get; private set; }
         public Vector PointB { get; private set; }
         public Vector PointC { get; private set; }
-        public float A => PointA.Distance(PointB);
-        public float B => PointA.Distance(PointC);
-        public float C => PointB.Distance(PointC);
+        public double A => PointA.Distance(PointB);
+        public double B => PointA.Distance(PointC);
+        public double C => PointB.Distance(PointC);
         public Triangle(Vector pointA, Vector pointB, Vector pointC) : base("Треугольник")
         {
             PointA = pointA;
@@ -37,12 +37,12 @@ namespace FigureLibrary
         }
         public bool IsStraightAngleTriangle()
         {
-            return A == Math.Sqrt(B * B + C * C) || B == Math.Sqrt(A * A + C * C) || C == Math.Sqrt(A * A + B * B);
+            return (A == Math.Sqrt(B * B + C * C) || B == Math.Sqrt(A * A + C * C) || C == Math.Sqrt(A * A + B * B));
         }
-        public override float Square()
+        public override double Square()
         {
-            float semiPerimeter = (A + B + C) / 2;
-            return (float)Math.Sqrt(semiPerimeter * (semiPerimeter - A) * (semiPerimeter - B) * (semiPerimeter - C));
+            double semiPerimeter = (A + B + C) / 2;
+            return Math.Sqrt(semiPerimeter * (semiPerimeter - A) * (semiPerimeter - B) * (semiPerimeter - C));
         }
         public string Print()
         {
