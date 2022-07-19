@@ -8,9 +8,9 @@ namespace FigureLibrary
 {
     public class Vector
     {
-        public float X { get; set; }
-        public float Y { get; set; }
-        public Vector(float x, float y)
+        public double X { get; set; }
+        public double Y { get; set; }
+        public Vector(double x, double y)
         {
             X = x;
             Y = y;
@@ -23,11 +23,11 @@ namespace FigureLibrary
         {
             return new Vector(pointA.X - pointB.X, pointA.Y - pointB.Y);
         }
-        public float Length()
+        public double Length()
         {
-            return (float)Math.Sqrt(X * X + Y * Y);
+            return Math.Sqrt(X * X + Y * Y);
         }
-        public float Distance(Vector point)
+        public double Distance(Vector point)
         {
             return (this - point).Length();
         }
