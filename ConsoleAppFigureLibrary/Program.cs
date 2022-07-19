@@ -19,6 +19,8 @@ namespace ConsoleAppFigureLibrary
             Console.WriteLine(triangleWithoutVertices.Print());
             Circle circle = new Circle(5);
             Console.WriteLine(circle.Print());
+            Figure figure = triangle;
+            Console.WriteLine(figure.Square());
             Console.ReadKey();
         }
     }

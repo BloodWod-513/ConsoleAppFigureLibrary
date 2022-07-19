@@ -8,6 +8,10 @@
             FigureType = figureType;
         }
         public abstract double Square();
+        public double Square(Figure figure)
+        {
+            return figure.Square();
+        }
         public override string ToString()
         {
             return FigureType;
