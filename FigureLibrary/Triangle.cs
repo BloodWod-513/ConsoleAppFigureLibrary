@@ -12,17 +12,42 @@ namespace FigureLibrary
         public Vector PointA { get; private set; }
         public Vector PointB { get; private set; }
         public Vector PointC { get; private set; }
-        public double A => PointA.Distance(PointB);
-        public double B => PointA.Distance(PointC);
-        public double C => PointB.Distance(PointC);
-        public Triangle(Vector pointA, Vector pointB, Vector pointC) : base("Треугольник")
+        public double A
+        {
+            get => a;
+            set => a = value;
+        }
+
+        public double B
+        {
+            get => b;
+            set => b = value;
+        }
+        public double C
+        {
+            get => c;
+            set => c = value;
+        }
+        public bool HasVertices { get; protected set; }
+        private double a;
+        private double b;
+        private double c;
+        private const string defaultFigureName = "Треугольник";
+        public Triangle(Vector pointA, Vector pointB, Vector pointC) : base(defaultFigureName)
         {
             PointA = pointA;
             PointB = pointB;
             PointC = pointC;
-            IsExsist();
-            if (IsStraightAngleTriangle())
-                FigureType = "Прямоугольный треугольник";
+            HasVertices = true;
+            MakeTriangle(HasVertices);
+        }
+        public Triangle(double a, double b, double c) : base(defaultFigureName)
+        {
+            A = a;
+            B = b;
+            C = c;
+            HasVertices = false;
+            MakeTriangle(HasVertices);
         }
         public void IsExsist()
         {
@@ -54,6 +79,19 @@ namespace FigureLibrary
                 $"Сторона A: {A}\n" +
                 $"Сторона B: {B}\n" +
                 $"Сторона C: {C}\n";
+        }
+        private void SetLengths()
+        {
+            a = PointA.Distance(PointB);
+            b = PointA.Distance(PointC);
+            c = PointB.Distance(PointC);
+        }
+        private void MakeTriangle(bool withVertices)
+        {
+            if (withVertices) SetLengths();
+            IsExsist();
+            if (IsStraightAngleTriangle())
+                FigureType = "Прямоугольный треугольник";
         }
     }
 }
