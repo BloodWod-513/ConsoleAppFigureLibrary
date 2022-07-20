@@ -53,7 +53,7 @@ namespace FigureLibrary
             double semiPerimeter = (A + B + C) / 2;
             return Math.Sqrt(semiPerimeter * (semiPerimeter - A) * (semiPerimeter - B) * (semiPerimeter - C));
         }
-        protected void MakeTriangle()
+        protected void TryMakeTriangle()
         {
             IsExsist();
             if (IsStraightAngleTriangle())

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace FigureLibrary
 {
-    public class TriangleWithoutVertices : Triangle, IPrint
+    public class TriangleWithSides : Triangle, IPrint
     {
-        public TriangleWithoutVertices(double a, double b, double c)
+        public TriangleWithSides(double a, double b, double c)
         {
             A = a;
             B = b;
             C = c;
-            MakeTriangle();
+            TryMakeTriangle();
         }
         public void SetA(double a)
         {

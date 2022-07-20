@@ -44,7 +44,7 @@ namespace FigureLibrary
             PointB = pointB;
             PointC = pointC;
             SetLengths();
-            MakeTriangle();
+            TryMakeTriangle();
         }
         public string Print()
         {
