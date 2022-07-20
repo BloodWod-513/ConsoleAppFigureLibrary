@@ -21,8 +21,8 @@ namespace FigureLibrary.Test
         public void PolygonWithSixVericesSquare()
         {
             FigureWithVertices figureWithVertices = new FigureWithVertices(
-                new List<Vector> 
-                { 
+                new List<Vector>
+                {
                     new Vector(1, 1), new Vector(4, 1), new Vector(2, 5),
                     new Vector(7, 5), new Vector(3, 4), new Vector(6, 2)
                 });
