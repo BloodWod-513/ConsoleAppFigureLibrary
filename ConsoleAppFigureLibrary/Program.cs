@@ -20,6 +20,7 @@ namespace ConsoleAppFigureLibrary
             Circle circle = new Circle(5);
             Console.WriteLine(circle.Print());
             Figure figure = triangle;
+            Console.WriteLine("compiled time " + Figure.Square(triangle));
             Console.WriteLine(figure.Square());
             Figure figureCircle = circle;
             Console.WriteLine(figureCircle.Square());

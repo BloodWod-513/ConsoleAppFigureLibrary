@@ -8,7 +8,7 @@
             FigureType = figureType;
         }
         public abstract double Square();
-        public virtual double Square(Figure figure)
+        public static double Square(Figure figure)
         {
             return figure.Square();
         }
